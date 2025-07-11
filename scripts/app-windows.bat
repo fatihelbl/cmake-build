@@ -1,0 +1,1 @@
+cmake --preset app-windows && cmake --build build -- -j28

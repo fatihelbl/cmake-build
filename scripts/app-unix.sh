@@ -1,0 +1,1 @@
+cmake --preset app-unix && cmake --build build -- -j28

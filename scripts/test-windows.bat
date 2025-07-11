@@ -1,0 +1,1 @@
+cmake --preset test-windows && cmake --build buildtest -- -j28

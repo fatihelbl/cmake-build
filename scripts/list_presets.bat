@@ -1,0 +1,1 @@
+cmake --list-presets

@@ -1,0 +1,55 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "app-windows",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_ARM": "ON",
+                "BUILD_TEST" :"OFF"
+            }
+        },
+        {
+            "name": "app-unix",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_ARM": "ON",
+                "BUILD_TEST" :"OFF"
+            }
+        },
+        {
+            "name": "test-windows",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/buildtest",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_ARM": "OFF",
+                "BUILD_TEST" :"ON"
+            }
+        },
+        {
+            "name": "test-unix",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/buildtest",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_ARM": "OFF",
+                "BUILD_TEST" :"ON"
+            }
+        },
+        {
+            "name": "default",
+            "hidden": true,
+            "inherits": "app-windows"
+        }
+    ]
+}
